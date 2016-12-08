@@ -8,6 +8,7 @@
     "aframe-bmfont-text-component": "^0.1.4",
     "aframe-react": "^3.4.0",
     "aframe-text-component": "^0.3.0",
+    "babel": "^6.5.2",
     "babel-polyfill": "^6.3.14",
     "lodash": "^4.17.2",
     "react": "^15.4.1",
