@@ -36,7 +36,7 @@ class VRScene extends React.Component {
         <Sky src="url(https://rawgit.com/aframevr/assets/gh-pages/360-image-gallery-boilerplate/img/sechelt.jpg)"/>
 
         <Text
-          text='Hello World!'
+          text='sayhi@austinmao.com'
           color='#DADADA'
           position='-1.75 1 -3'/>
 
