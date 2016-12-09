@@ -106,11 +106,28 @@
 	  }
 
 	  _createClass(VRScene, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.selectRandomSkyImage();
+	    }
+	  }, {
 	    key: 'changeColor',
 	    value: function changeColor() {
 	      var colors = ['red', 'orange', 'yellow', 'green', 'blue'];
 	      this.setState({
 	        color: colors[Math.floor(Math.random() * colors.length)]
+	      });
+	    }
+	  }, {
+	    key: 'selectRandomSkyImage',
+	    value: function selectRandomSkyImage() {
+	      var urlPrefix = 'images/';
+	      var images = ['berlin1.jpg', 'florence_aiweiwei.jpg', 'florence_clocks.jpg', 'florence_david.jpg', 'florence_restaurant.jpg', 'rome_colloseum.jpg', 'rome_opera.jpg', 'rome_trevi_fountain.jpg'];
+	      var randomSkyImageIndex = Math.floor(Math.random() * images.length);
+
+	      // set image on state
+	      this.setState({
+	        skyImage: 'url(' + urlPrefix + images[randomSkyImageIndex] + ')'
 	      });
 	    }
 	  }, {
@@ -126,7 +143,7 @@
 	            animation__click: 'property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150'
 	          })
 	        ),
-	        _react2.default.createElement(_Sky2.default, { src: 'url(https://s3.amazonaws.com/austinmao.com/images/berlin1.jpg)' }),
+	        _react2.default.createElement(_Sky2.default, { src: this.state.skyImage }),
 	        _react2.default.createElement(_Text2.default, {
 	          text: 'sayhi@austinmao.com',
 	          color: '#DADADA',
