@@ -52,7 +52,12 @@ module.exports = {
       {
         test: /\.json$/,
         loader: 'json-loader'
-      }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        include : path.join(__dirname, 'images'),
+        loader  : 'url-loader?limit=30000&name=images/[name].[ext]'
+      }, // inline base64 URLs for <=30k images, direct URLs for the rest
     ],
   },
   plugins: PLUGINS,

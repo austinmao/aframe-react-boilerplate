@@ -16,10 +16,34 @@ class VRScene extends React.Component {
     this.state = {color: 'red'};
   }
 
+  componentDidMount() {
+    this.selectRandomSkyImage()
+  }
+
   changeColor() {
     const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
     this.setState({
       color: colors[Math.floor(Math.random() * colors.length)]
+    });
+  }
+
+  selectRandomSkyImage() {
+    const urlPrefix = 'images/';
+    const images = [
+      'berlin1.jpg',
+      'florence_aiweiwei.jpg',
+      'florence_clocks.jpg',
+      'florence_david.jpg',
+      'florence_restaurant.jpg',
+      'rome_colloseum.jpg',
+      'rome_opera.jpg',
+      'rome_trevi_fountain.jpg',
+    ];
+    const randomSkyImageIndex = Math.floor(Math.random() * images.length)
+
+    // set image on state
+    this.setState({
+      skyImage: 'url(' + urlPrefix + images[randomSkyImageIndex] + ')'
     });
   }
 
@@ -33,7 +57,7 @@ class VRScene extends React.Component {
           </a-cursor>
         </Camera>
 
-        <Sky src="url(./images/rome_opera.jpg)"/>
+        <Sky src={this.state.skyImage}/>
 
         <Text
           text='sayhi@austinmao.com'

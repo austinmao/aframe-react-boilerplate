@@ -126,7 +126,7 @@
 	            animation__click: 'property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150'
 	          })
 	        ),
-	        _react2.default.createElement(_Sky2.default, { src: 'url(https://rawgit.com/aframevr/assets/gh-pages/360-image-gallery-boilerplate/img/sechelt.jpg)' }),
+	        _react2.default.createElement(_Sky2.default, { src: 'url(https://s3.amazonaws.com/austinmao.com/images/berlin1.jpg)' }),
 	        _react2.default.createElement(_Text2.default, {
 	          text: 'sayhi@austinmao.com',
 	          color: '#DADADA',
@@ -98855,7 +98855,7 @@
 
 	exports.default = function (props) {
 	  return _react2.default.createElement(_aframeReact.Entity, {
-	    geometry: { primitive: 'sphere', radius: 100 },
+	    geometry: { primitive: 'sphere', radius: 10000 },
 	    material: { shader: 'flat', src: props.src },
 	    scale: '1 1 -1' });
 	};
