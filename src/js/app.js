@@ -33,7 +33,7 @@ class VRScene extends React.Component {
           </a-cursor>
         </Camera>
 
-        <Sky src="url(https://rawgit.com/aframevr/assets/gh-pages/360-image-gallery-boilerplate/img/sechelt.jpg)"/>
+        <Sky src="url(./images/rome_opera.jpg)"/>
 
         <Text
           text='sayhi@austinmao.com'
